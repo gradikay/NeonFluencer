@@ -107,27 +107,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to show testimonial by index
     function showTestimonial(index) {
-        // First hide all testimonials
         testimonials.forEach(testimonial => {
             testimonial.classList.remove('active');
-            testimonial.style.transform = 'translateX(100px)';
-            testimonial.style.opacity = '0';
         });
         
-        // Remove active class from all dots
         dots.forEach(dot => {
             dot.classList.remove('active');
         });
         
-        // After a small delay, show the selected testimonial
-        setTimeout(() => {
-            testimonials[index].classList.add('active');
-            testimonials[index].style.transform = 'translateX(0)';
-            testimonials[index].style.opacity = '1';
-            dots[index].classList.add('active');
-        }, 50);
-        
-        // Update current testimonial index
+        testimonials[index].classList.add('active');
+        dots[index].classList.add('active');
         currentTestimonial = index;
     }
     
@@ -157,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let testimonialInterval = setInterval(function() {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
-    }, 6000);
+    }, 5000);
     
     // Pause auto-rotation on hover
     const testimonialsContainer = document.querySelector('.testimonials-slider');
@@ -170,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         testimonialInterval = setInterval(function() {
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             showTestimonial(currentTestimonial);
-        }, 6000);
+        }, 5000);
     });
     
     // ===== Newsletter Form =====
