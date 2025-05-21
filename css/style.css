@@ -463,8 +463,6 @@ button {
     z-index: 10;
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     will-change: transform;
-    width: 100%;
-    display: inline-block;
 }
 
 .hero::before {
@@ -624,10 +622,9 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1; /* Lower z-index so it doesn't interfere with clickable elements */
+    z-index: 2;
     opacity: 0.7;
     transition: opacity var(--transition-medium);
-    pointer-events: none; /* Make it non-interactive so it doesn't block clicks */
 }
 
 .scroll-indicator:hover {

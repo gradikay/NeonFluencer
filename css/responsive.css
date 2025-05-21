@@ -45,7 +45,7 @@
     }
 
     .hero-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         align-items: center;
         gap: var(--space-lg);
@@ -53,31 +53,17 @@
 
     .hero-text {
         padding-right: 0;
-        margin-top: var(--space-lg);
+        margin-bottom: var(--space-lg);
         max-width: 100%;
-        order: 2;
     }
 
     .hero-buttons, .hero-socials {
         justify-content: center;
-        width: 100%;
-    }
-    
-    .hero-buttons .magnetic-wrap {
-        width: 80%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    
-    .hero-buttons .magnetic-button {
-        width: 100%;
-        display: block;
     }
     
     .hero-image {
         max-width: 60%;
         margin: 0 auto;
-        order: 1;
     }
 
     .about-text {
@@ -277,18 +263,6 @@
     .about-buttons {
         flex-direction: column;
         gap: var(--space-sm);
-        width: 100%;
-    }
-    
-    .about-buttons .magnetic-wrap {
-        width: 80%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    
-    .about-buttons .magnetic-button {
-        width: 100%;
-        display: block;
     }
     
     .featured-logos {
