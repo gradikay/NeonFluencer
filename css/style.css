@@ -254,6 +254,7 @@ button {
     align-items: center;
     background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
     overflow: hidden;
+    padding-top: 80px; /* Add padding to account for fixed header */
 }
 
 .hero::before {
