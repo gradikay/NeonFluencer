@@ -1,5 +1,15 @@
 /* ========== Responsive Styles ========== */
 
+/* Fix for vertical scrolling on mobile devices */
+@media screen and (max-width: 1200px) {
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 /* Large Desktops */
 @media (max-width: 1200px) {
     .container {
