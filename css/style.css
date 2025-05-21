@@ -625,6 +625,72 @@ button {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* ========== Gallery Section ========== */
+.gallery {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    position: relative;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1/1;
+    transition: var(--transition-medium);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition-medium);
+}
+
+.gallery-image.img1 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?tech,gadgets');
+}
+
+.gallery-image.img2 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?influencer,studio');
+}
+
+.gallery-image.img3 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?streaming,gaming');
+}
+
+.gallery-image.img4 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?conference,event');
+}
+
+.gallery-image.img5 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?tech,unboxing');
+}
+
+.gallery-image.img6 {
+    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
+                      url('https://source.unsplash.com/random/600x600/?workspace,setup');
+}
+
 /* ========== Featured Section ========== */
 .featured {
     padding: var(--space-xl) 0;
@@ -832,11 +898,15 @@ button {
     transition: opacity var(--transition-medium), transform var(--transition-medium);
     border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
+    z-index: 1;
+    visibility: hidden;
 }
 
 .testimonial-card.active {
     opacity: 1;
     transform: translateX(0);
+    visibility: visible;
+    z-index: 2;
 }
 
 .quote-icon {
@@ -1376,6 +1446,14 @@ button {
         flex: 0 0 auto;
     }
     
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .section-header h2 {
         font-size: 2rem;
     }
@@ -1389,7 +1467,8 @@ button {
     }
     
     .social-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
     }
 }
 
