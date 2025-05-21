@@ -1304,20 +1304,7 @@ button {
     color: var(--primary-red);
 }
 
-/* ========== Responsive Styles ========== */
-@media (max-width: 1200px) {
-    html {
-        font-size: 15px;
-    }
-
-    .hero-text h1 {
-        font-size: 4rem;
-    }
-
-    .tagline {
-        font-size: 1.6rem;
-    }
-}
+/* End of styles */
 
 @media (max-width: 992px) {
     html {
