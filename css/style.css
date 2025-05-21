@@ -841,6 +841,7 @@ button {
     transform: translateX(0);
     pointer-events: auto;
     z-index: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .quote-icon {
@@ -1368,6 +1369,7 @@ button {
     
     .hero-image {
         max-width: 100%;
+        display: block !important;
     }
     
     .stats .container {
