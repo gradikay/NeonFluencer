@@ -4,38 +4,38 @@
     --primary-red: #ff3366;
     --primary-blue: #17e9ea;
     --primary-yellow: #ffcc00;
-    
+
     /* Background colors */
     --bg-dark: #0a0a12;
     --bg-darker: #06060a;
     --bg-card: rgba(30, 30, 48, 0.7);
-    
+
     /* Text colors */
     --text-light: #ffffff;
     --text-dim: rgba(255, 255, 255, 0.7);
     --text-accent: #ff3366;
-    
+
     /* Functional colors */
     --glow-red: rgba(255, 51, 102, 0.7);
     --glow-blue: rgba(23, 233, 234, 0.7);
     --glow-yellow: rgba(255, 204, 0, 0.7);
-    
+
     /* Font families */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Poppins', sans-serif;
-    
+
     /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 2rem;
     --space-lg: 4rem;
     --space-xl: 8rem;
-    
+
     /* Border radius */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
@@ -399,16 +399,16 @@ button {
 .image-wrapper {
     width: 100%;
     height: 100%;
-    background-image: url('https://raw.githubusercontent.com/yourusername/yourproject/main/assets/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
     border-radius: var(--radius-lg);
     position: relative;
+    overflow: hidden;
 }
 
-/* Use the uploaded image instead */
-.image-wrapper {
-    background-image: url('../attached_assets/img1.png');
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .scroll-indicator {
@@ -957,8 +957,7 @@ button {
 }
 
 .prev-testimonial:hover, .next-testimonial:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.1);color: var(--text-light);
     transform: scale(1.1);
 }
 
@@ -1320,11 +1319,11 @@ button {
     html {
         font-size: 15px;
     }
-    
+
     .hero-text h1 {
         font-size: 4rem;
     }
-    
+
     .tagline {
         font-size: 1.6rem;
     }
@@ -1334,50 +1333,50 @@ button {
     html {
         font-size: 14px;
     }
-    
+
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero-text {
         padding-right: 0;
         margin-bottom: var(--space-lg);
     }
-    
+
     .hero-buttons, .hero-socials {
         justify-content: center;
     }
-    
+
     .about-text {
         padding: 0 var(--space-md);
     }
-    
+
     .video-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .featured-video {
         grid-column: auto;
     }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-logo {
         justify-content: center;
     }
-    
+
     .footer-links ul {
         justify-content: center;
     }
-    
+
     .footer-socials {
         justify-content: center;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -1388,7 +1387,7 @@ button {
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -1405,67 +1404,67 @@ button {
         border: 1px solid rgba(255, 255, 255, 0.05);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
-    
+
     .nav-links.active {
         right: var(--space-sm);
     }
-    
+
     .nav-links li {
         width: 100%;
     }
-    
+
     .nav-links a {
         display: block;
         padding: var(--space-sm) 0;
     }
-    
+
     .hero {
         min-height: auto;
         padding: calc(var(--space-lg) * 2) 0 var(--space-lg);
     }
-    
+
     .hero-text h1 {
         font-size: 3rem;
     }
-    
+
     .tagline {
         font-size: 1.3rem;
     }
-    
+
     .hero-image {
         max-width: 100%;
     }
-    
+
     .stats .container {
         flex-wrap: wrap;
         gap: var(--space-sm);
     }
-    
+
     .stat-item {
         width: calc(50% - var(--space-sm));
         flex: 0 0 auto;
     }
-    
+
     .video-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .section-header h2 {
         font-size: 2rem;
     }
-    
+
     .testimonial-card {
         padding: var(--space-md);
     }
-    
+
     .testimonial-text {
         font-size: 1rem;
     }
-    
+
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
@@ -1476,28 +1475,28 @@ button {
     html {
         font-size: 13px;
     }
-    
+
     .hero-text h1 {
         font-size: 2.5rem;
     }
-    
+
     .tagline {
         font-size: 1.1rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         gap: var(--space-sm);
     }
-    
+
     .section-header h2 {
         font-size: 1.8rem;
     }
-    
+
     .subscribe-content {
         padding: 0 var(--space-sm);
     }
-    
+
     .contact-email {
         font-size: 1.2rem;
         word-break: break-all;
