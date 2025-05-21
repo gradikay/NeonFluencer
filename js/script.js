@@ -21,6 +21,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 2700);
     
+    // ===== Magnetic Buttons =====
+    const magneticButtons = document.querySelectorAll('.magnetic-wrap');
+    
+    magneticButtons.forEach(magneticWrap => {
+        const button = magneticWrap.querySelector('.magnetic-button');
+        const content = magneticWrap.querySelector('.magnetic-content');
+        
+        // Mouse move - magnetic effect
+        magneticWrap.addEventListener('mousemove', (e) => {
+            const bounds = magneticWrap.getBoundingClientRect();
+            const centerX = bounds.left + bounds.width / 2;
+            const centerY = bounds.top + bounds.height / 2;
+            
+            // Calculate distance from center as a percentage
+            const distanceX = (e.clientX - centerX) / (bounds.width / 2);
+            const distanceY = (e.clientY - centerY) / (bounds.height / 2);
+            
+            // Apply transforms
+            button.style.transform = `translate3d(${distanceX * 10}px, ${distanceY * 10}px, 0)`;
+            content.style.transform = `translate3d(${distanceX * 5}px, ${distanceY * 5}px, 0)`;
+        });
+        
+        // Mouse leave - reset position
+        magneticWrap.addEventListener('mouseleave', () => {
+            button.style.transform = 'translate3d(0, 0, 0)';
+            content.style.transform = 'translate3d(0, 0, 0)';
+        });
+    });
+    
     // ===== Custom Cursor =====
     const cursor = document.getElementById('cursor');
     

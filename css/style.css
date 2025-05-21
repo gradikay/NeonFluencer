@@ -380,6 +380,91 @@ button {
     padding-top: 80px;
 }
 
+/* Glitch Effect */
+.glitch-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch {
+    position: relative;
+    color: var(--text-light);
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glitch::before {
+    left: -2px;
+    text-shadow: 2px 0 var(--primary-red);
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: 2px;
+    text-shadow: -2px 0 var(--primary-blue);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0%, 80%, 100% {
+        clip-path: inset(50% 0 30% 0);
+    }
+    20% {
+        clip-path: inset(33% 0 33% 0);
+    }
+    40% {
+        clip-path: inset(10% 0 60% 0);
+    }
+    60% {
+        clip-path: inset(62% 0 5% 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0%, 80%, 100% {
+        clip-path: inset(40% 0 43% 0);
+    }
+    20% {
+        clip-path: inset(15% 0 60% 0);
+    }
+    40% {
+        clip-path: inset(63% 0 8% 0);
+    }
+    60% {
+        clip-path: inset(30% 0 45% 0);
+    }
+}
+
+/* Magnetic Buttons Effect */
+.magnetic-wrap {
+    position: relative;
+    display: inline-flex;
+    overflow: visible;
+    transform-style: preserve-3d;
+}
+
+.magnetic-button {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+}
+
+.magnetic-content {
+    position: relative;
+    z-index: 10;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+}
+
 .hero::before {
     content: '';
     position: absolute;
