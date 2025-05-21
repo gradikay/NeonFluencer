@@ -696,7 +696,7 @@ button {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-md);
 }
 
@@ -828,15 +828,18 @@ button {
     background: var(--bg-card);
     border-radius: var(--radius-md);
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(100px);
     transition: opacity var(--transition-medium), transform var(--transition-medium);
     border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
+    pointer-events: none;
 }
 
 .testimonial-card.active {
     opacity: 1;
     transform: translateX(0);
+    pointer-events: auto;
+    z-index: 1;
 }
 
 .quote-icon {
