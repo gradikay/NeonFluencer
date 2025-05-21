@@ -1,5 +1,26 @@
 // Wait for DOM content to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // ===== Welcome Screen Animation =====
+    const body = document.body;
+    
+    // Remove loading class after welcome animation completes
+    setTimeout(function() {
+        body.classList.remove('loading');
+    }, 2500); // Adjust timing to match the animation duration
+    
+    // Add page transition effects
+    const pageContent = document.querySelector('main');
+    const sections = document.querySelectorAll('section');
+    
+    // Initial page load animation
+    setTimeout(function() {
+        sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add('section-revealed');
+            }, 150 * index);
+        });
+    }, 2700);
+    
     // ===== Custom Cursor =====
     const cursor = document.getElementById('cursor');
     

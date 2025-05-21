@@ -1,3 +1,135 @@
+/* ========== Welcome Screen Animation ========== */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+body:not(.loading) .welcome-screen {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.logo-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-svg.animated {
+    transform: scale(0);
+    opacity: 0;
+    animation: logoAppear 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-top: var(--space-md);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textAppear 0.8s ease forwards 0.8s;
+}
+
+.welcome-text p {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textAppear 0.8s ease forwards 1.2s;
+}
+
+@keyframes logoAppear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes textAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content initial state */
+.header, main {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body:not(.loading) .header,
+body:not(.loading) main {
+    opacity: 1;
+}
+
+/* Section reveal animations */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.section-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add staggered reveal effect */
+.hero.section-revealed {
+    transition-delay: 0.1s;
+}
+
+.stats.section-revealed {
+    transition-delay: 0.2s;
+}
+
+.about.section-revealed {
+    transition-delay: 0.3s;
+}
+
+.gallery.section-revealed {
+    transition-delay: 0.4s;
+}
+
+.videos.section-revealed {
+    transition-delay: 0.5s;
+}
+
+.testimonials.section-revealed {
+    transition-delay: 0.6s;
+}
+
+.social-links.section-revealed {
+    transition-delay: 0.7s;
+}
+
+.subscribe.section-revealed {
+    transition-delay: 0.8s;
+}
+
+.contact.section-revealed {
+    transition-delay: 0.9s;
+}
+
 /* ========== Base Styles ========== */
 :root {
     /* Primary colors - from the neon image */
