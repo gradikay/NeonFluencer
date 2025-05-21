@@ -654,42 +654,25 @@ button {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.gallery-image {
+.gallery-image img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: var(--transition-medium);
+    object-fit: cover;
+    object-position: center;
 }
 
-.gallery-image.img1 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?tech,gadgets');
+.gallery-image {
+    position: relative;
 }
 
-.gallery-image.img2 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?influencer,studio');
-}
-
-.gallery-image.img3 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?streaming,gaming');
-}
-
-.gallery-image.img4 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?conference,event');
-}
-
-.gallery-image.img5 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?tech,unboxing');
-}
-
-.gallery-image.img6 {
-    background-image: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3)), 
-                      url('https://source.unsplash.com/random/600x600/?workspace,setup');
+.gallery-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(10, 10, 18, 0.3), rgba(10, 10, 18, 0.3));
 }
 
 /* ========== Featured Section ========== */
@@ -1334,7 +1317,7 @@ button {
     html {
         font-size: 14px;
     }
-    
+
     .hero {
         height: auto;
         min-height: auto;
@@ -1356,7 +1339,7 @@ button {
     .hero-buttons, .hero-socials {
         justify-content: center;
     }
-    
+
     .hero-image {
         max-width: 60%;
         margin: 0 auto;
@@ -1437,34 +1420,34 @@ button {
         height: auto;
         padding: calc(var(--space-lg) * 2) 0 var(--space-lg);
     }
-    
+
     .hero-content {
         flex-direction: column;
         gap: var(--space-lg);
     }
-    
+
     .hero-text {
         padding-right: 0;
         text-align: center;
         max-width: 100%;
     }
-    
+
     .hero-text h1 {
         font-size: 3rem;
     }
-    
+
     .tagline {
         font-size: 1.3rem;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .hero-socials {
         justify-content: center;
     }
-    
+
     .hero-image {
         max-width: 80%;
         margin: 0 auto;
