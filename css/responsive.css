@@ -211,6 +211,25 @@
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
+        width: 100%;
+    }
+    
+    .social-card {
+        min-width: 0;
+        width: 100%;
+        padding: var(--space-md);
+    }
+    
+    .social-icon {
+        font-size: 2rem;
+    }
+    
+    .social-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .social-stats {
+        font-size: 0.9rem;
     }
     
     .video-card {
@@ -248,6 +267,38 @@
     
     .featured-logos {
         gap: var(--space-md);
+    }
+    
+    /* Footer improvements for mobile */
+    .footer-logo {
+        font-size: 1rem;
+    }
+    
+    .footer-text {
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+    
+    .footer-links h4 {
+        font-size: 1rem;
+    }
+    
+    .footer-links ul {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+    
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.8rem;
     }
     
     .logo-item {
