@@ -450,16 +450,13 @@ button {
 }
 
 .stats .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
+    width: 100%;
 }
 
 .stat-item {
-    flex: 1;
-    min-width: 200px;
     text-align: center;
     padding: var(--space-md);
     background: rgba(30, 30, 48, 0.4);
@@ -609,6 +606,7 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
+    width: 100%;
 }
 
 .gallery-item {
@@ -711,6 +709,7 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
+    width: 100%;
 }
 
 .video-card {
@@ -932,7 +931,7 @@ button {
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
 }
 

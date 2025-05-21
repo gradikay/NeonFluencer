@@ -35,6 +35,10 @@
         font-size: 14px;
     }
     
+    .stats .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .hero {
         height: auto;
         min-height: auto;
@@ -175,11 +179,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
+        width: 100%;
     }
     
     .stat-item {
         width: 100%;
         margin: 0;
+        min-width: 0;
     }
     
     .video-grid {
@@ -205,6 +211,14 @@
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
+    }
+    
+    .video-card {
+        min-width: 0;
+    }
+    
+    .gallery-item {
+        min-width: 0;
     }
 }
 
