@@ -60,6 +60,18 @@
 
     .hero-buttons, .hero-socials {
         justify-content: center;
+        width: 100%;
+    }
+    
+    .hero-buttons .magnetic-wrap {
+        width: 80%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons .magnetic-button {
+        width: 100%;
+        display: block;
     }
     
     .hero-image {
@@ -265,6 +277,18 @@
     .about-buttons {
         flex-direction: column;
         gap: var(--space-sm);
+        width: 100%;
+    }
+    
+    .about-buttons .magnetic-wrap {
+        width: 80%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .about-buttons .magnetic-button {
+        width: 100%;
+        display: block;
     }
     
     .featured-logos {

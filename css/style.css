@@ -463,6 +463,8 @@ button {
     z-index: 10;
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     will-change: transform;
+    width: 100%;
+    display: inline-block;
 }
 
 .hero::before {
