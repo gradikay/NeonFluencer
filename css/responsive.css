@@ -1,0 +1,236 @@
+/* ========== Responsive Styles ========== */
+
+/* Large Desktops */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .tagline {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablets & Small Desktops */
+@media (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: var(--space-lg);
+        max-width: 100%;
+    }
+
+    .hero-buttons, .hero-socials {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        padding: 0 var(--space-md);
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-video {
+        grid-column: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Tablets & Large Phones */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        flex-direction: column;
+        background: rgba(10, 10, 18, 0.95);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+        transition: right var(--transition-medium);
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: var(--space-sm);
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: var(--space-sm) 0;
+    }
+    
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: calc(var(--space-lg) * 2) 0 var(--space-lg);
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .tagline {
+        font-size: 1.3rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-socials {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .stats .container {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+    
+    .stat-item {
+        width: calc(50% - var(--space-sm));
+        flex: 0 0 auto;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonial-card {
+        padding: var(--space-md);
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .about-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .featured-logos {
+        gap: var(--space-md);
+    }
+    
+    .logo-item {
+        width: 40%;
+        text-align: center;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links ul {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+    
+    .contact-form .form-group {
+        width: 100%;
+    }
+}
