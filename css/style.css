@@ -135,6 +135,13 @@ button {
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+    display: none; /* Hide on all devices by default */
+}
+
+@media (min-width: 992px) {
+    .custom-cursor {
+        display: block; /* Only show on desktop */
+    }
 }
 
 /* ========== Header Styles ========== */
