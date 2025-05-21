@@ -241,4 +241,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update reveal on scroll
     window.addEventListener('scroll', revealOnScroll);
+    
+    // Gallery image touch interaction for mobile
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+        // Handle touch events for mobile
+        item.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+            this.style.transition = 'transform 0.2s ease';
+        });
+        
+        item.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1.03)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 300);
+        });
+    });
 });
