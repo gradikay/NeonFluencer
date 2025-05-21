@@ -444,23 +444,9 @@ button {
     }
 }
 
-/* Magnetic Buttons Effect */
-.magnetic-wrap {
-    position: relative;
-    display: inline-flex;
-    overflow: visible;
+/* Magnetic Buttons Effect - general class added to main buttons */
+.magnetic-effect {
     transform-style: preserve-3d;
-}
-
-.magnetic-button {
-    transform-style: preserve-3d;
-    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    will-change: transform;
-}
-
-.magnetic-content {
-    position: relative;
-    z-index: 10;
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     will-change: transform;
 }
