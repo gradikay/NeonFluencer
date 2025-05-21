@@ -45,7 +45,7 @@
     }
 
     .hero-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
         align-items: center;
         gap: var(--space-lg);
@@ -53,8 +53,9 @@
 
     .hero-text {
         padding-right: 0;
-        margin-bottom: var(--space-lg);
+        margin-top: var(--space-lg);
         max-width: 100%;
+        order: 2;
     }
 
     .hero-buttons, .hero-socials {
@@ -64,6 +65,7 @@
     .hero-image {
         max-width: 60%;
         margin: 0 auto;
+        order: 1;
     }
 
     .about-text {
