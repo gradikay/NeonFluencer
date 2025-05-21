@@ -624,9 +624,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    z-index: 1; /* Lower z-index so it doesn't interfere with clickable elements */
     opacity: 0.7;
     transition: opacity var(--transition-medium);
+    pointer-events: none; /* Make it non-interactive so it doesn't block clicks */
 }
 
 .scroll-indicator:hover {
