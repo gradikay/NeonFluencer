@@ -2,34 +2,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     // ===== Custom Cursor =====
     const cursor = document.getElementById('cursor');
-    const links = document.querySelectorAll('a, button');
     
-    // Show cursor on mouse move
-    document.addEventListener('mousemove', function(e) {
-        cursor.style.opacity = '1';
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-    
-    // Hide cursor when leaving the window
-    document.addEventListener('mouseleave', function() {
-        cursor.style.opacity = '0';
-    });
-    
-    // Enlarge cursor on hover over links and buttons
-    links.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            cursor.style.width = '40px';
-            cursor.style.height = '40px';
-            cursor.style.borderWidth = '3px';
+    // Only initialize custom cursor on desktop devices
+    if (cursor && window.innerWidth > 768) {
+        const links = document.querySelectorAll('a, button');
+        
+        // Show cursor on mouse move
+        document.addEventListener('mousemove', function(e) {
+            cursor.style.opacity = '1';
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
         });
         
-        link.addEventListener('mouseleave', function() {
-            cursor.style.width = '20px';
-            cursor.style.height = '20px';
-            cursor.style.borderWidth = '2px';
+        // Hide cursor when leaving the window
+        document.addEventListener('mouseleave', function() {
+            cursor.style.opacity = '0';
         });
-    });
+        
+        // Enlarge cursor on hover over links and buttons
+        links.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                cursor.style.width = '40px';
+                cursor.style.height = '40px';
+                cursor.style.borderWidth = '3px';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                cursor.style.width = '20px';
+                cursor.style.height = '20px';
+                cursor.style.borderWidth = '2px';
+            });
+        });
+    } else if (cursor) {
+        // Hide cursor on mobile devices
+        cursor.style.display = 'none';
+    }
     
     // ===== Sticky Header =====
     const header = document.querySelector('.header');

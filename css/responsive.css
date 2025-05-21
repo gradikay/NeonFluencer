@@ -155,13 +155,14 @@
     }
     
     .stats .container {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
     }
     
     .stat-item {
-        width: calc(50% - var(--space-sm));
-        flex: 0 0 auto;
+        width: 100%;
+        margin: 0;
     }
     
     .video-grid {
