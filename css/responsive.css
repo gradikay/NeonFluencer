@@ -270,35 +270,70 @@
     }
     
     /* Footer improvements for mobile */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-lg);
+        padding: var(--space-lg) 0;
+    }
+    
+    .footer-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .footer-logo {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: var(--space-md);
     }
     
     .footer-text {
-        font-size: 0.85rem;
+        font-size: 1rem;
         max-width: 100%;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .footer-links {
+        width: 100%;
     }
     
     .footer-links h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        margin-bottom: var(--space-md);
     }
     
     .footer-links ul {
-        flex-wrap: wrap;
-        gap: var(--space-sm);
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
     }
     
     .footer-links a {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
+        padding: var(--space-xs) 0;
+        display: block;
     }
     
     .footer-socials {
         justify-content: center;
+        margin: var(--space-lg) 0;
+    }
+    
+    .footer-socials a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
     }
     
     .footer-bottom {
+        flex-direction: column;
         text-align: center;
-        font-size: 0.8rem;
+        gap: var(--space-md);
+        font-size: 0.9rem;
+        padding-top: var(--space-lg);
     }
     
     .logo-item {
