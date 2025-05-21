@@ -1367,12 +1367,13 @@ button {
     }
     
     .stats .container {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: var(--space-sm);
     }
     
     .stat-item {
-        width: 100%;
+        width: calc(50% - var(--space-sm));
+        flex: 0 0 auto;
     }
     
     .section-header h2 {
