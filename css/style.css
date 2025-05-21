@@ -946,6 +946,9 @@ button {
     text-align: center;
     transition: var(--transition-medium);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .social-card:hover {
