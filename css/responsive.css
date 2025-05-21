@@ -78,6 +78,23 @@
         flex-direction: column;
         text-align: center;
     }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-links ul {
+        justify-content: center;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Tablets & Large Phones */
