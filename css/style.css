@@ -1334,19 +1334,32 @@ button {
     html {
         font-size: 14px;
     }
+    
+    .hero {
+        height: auto;
+        min-height: auto;
+    }
 
     .hero-content {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        gap: var(--space-lg);
     }
 
     .hero-text {
         padding-right: 0;
         margin-bottom: var(--space-lg);
+        max-width: 100%;
     }
 
     .hero-buttons, .hero-socials {
         justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 60%;
+        margin: 0 auto;
     }
 
     .about-text {
